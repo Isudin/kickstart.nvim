@@ -19,6 +19,14 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 vim.keymap.set('c', '<C-Backspace>', '<C-w>', { desc = 'Remove previous word' })
 
+vim.keymap.set('n', 'z;', 'za', { desc = 'Toggle fold under the cursor' })
+vim.keymap.set('n', 'z:', 'zA', { desc = 'Toggle all folds under the cursor' })
+
+-- Auto indent on empty line.
+vim.keymap.set('n', 'i', function()
+  return string.match(vim.api.nvim_get_current_line(), '%g') == nil and 'cc' or 'i'
+end, { expr = true, noremap = true })
+
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
@@ -34,10 +42,18 @@ vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window to the right' })
 vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
 vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
 
-vim.keymap.set('n', 'z;', 'za', { desc = 'Toggle fold under the cursor' })
-vim.keymap.set('n', 'z:', 'zA', { desc = 'Toggle all folds under the cursor' })
-
----- Auto indent on empty line.
-vim.keymap.set('n', 'i', function()
-  return string.match(vim.api.nvim_get_current_line(), '%g') == nil and 'cc' or 'i'
-end, { expr = true, noremap = true })
+vim.keymap.set('n', '<leader>w', '', { desc = '+[W]indows management' })
+vim.keymap.set('n', '<leader>w0', '', { desc = 'Use CTRL+<hjkl> to switch between windows' })
+vim.keymap.set('n', '<leader>w1', '', { desc = 'Use CTRL+SHIFT+<hjkl> to move windows' })
+vim.keymap.set('n', '<leader>wo', '<C-w>o', { desc = 'Close all other windows' })
+vim.keymap.set('n', '<leader>wq', '<C-w>q', { desc = 'Quit window' })
+vim.keymap.set('n', '<leader>wj', '<C-w>s', { desc = 'Split window' })
+vim.keymap.set('n', '<leader>wl', '<C-w>v', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>wT', '<C-w>T', { desc = 'Break out into a new tab' })
+vim.keymap.set('n', '<leader>w+', '<C-w>+', { desc = 'Increase height' })
+vim.keymap.set('n', '<leader>w-', '<C-w>-', { desc = 'Decrease height' })
+vim.keymap.set('n', '<leader>w<', '<C-w><', { desc = 'Decrease width' })
+vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Increase width' })
+vim.keymap.set('n', '<leader>wr', '<C-w>=', { desc = 'Reset size for all windows' })
+vim.keymap.set('n', '<leader>w_', '<C-w>_', { desc = 'Max out height' })
+vim.keymap.set('n', '<leader>w|', '<C-w>|', { desc = 'Max out width' })
