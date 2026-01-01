@@ -57,3 +57,9 @@ vim.keymap.set('n', '<leader>w>', '<C-w>>', { desc = 'Increase width' })
 vim.keymap.set('n', '<leader>wr', '<C-w>=', { desc = 'Reset size for all windows' })
 vim.keymap.set('n', '<leader>w_', '<C-w>_', { desc = 'Max out height' })
 vim.keymap.set('n', '<leader>w|', '<C-w>|', { desc = 'Max out width' })
+
+-- Keymaps for deleting last word inside terminal and insert modes
+-- NOTE: CTRL+W (doesn't matter the case) always removes 'WORD' instead of 'word'
+-- hence separate binding for terminal mode
+vim.keymap.set('t', '<C-BS>', '<A-BS>', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-BS>', '<C-W>', { noremap = true, silent = true })

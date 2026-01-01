@@ -1,13 +1,14 @@
 return {
   {
     'folke/snacks.nvim',
+    priority = 1000,
     opts = {
-      terminal = {
-        win = {
-          border = 'rounded',
-          position = 'float',
-        },
-      },
+      -- terminal = {
+      --   win = {
+      --     border = 'rounded',
+      --     position = 'float',
+      --   },
+      -- },
       notifier = {
         enabled = true,
         timeout = 3000,
@@ -15,6 +16,9 @@ return {
         margin = { top = 1, right = 1 },
         border = 'rounded',
         position = 'top_right',
+      },
+      lazygit = {
+        enabled = true,
       },
     },
     require('keymaps/snacks').setup(),

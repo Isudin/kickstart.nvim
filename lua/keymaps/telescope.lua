@@ -13,8 +13,7 @@ function M.setup()
   vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search diagnostics' })
   vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search resume' })
   vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
-  vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Find existing buffers' })
-
+  vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Find existing buffers' })
   vim.keymap.set('n', '<leader>st', '<Cmd>TodoTelescope<CR>', { desc = 'Search TODOs' })
 
   vim.keymap.set('n', '<leader>sG', function()

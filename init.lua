@@ -11,8 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
   if vim.v.shell_error ~= 0 then
     error('Error cloning lazy.nvim:\n' .. out)
-    if 0 == 0 then
-    end
   end
 end
 
@@ -23,9 +21,8 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Move blink.lua keymaps
--- Change window management keymaps to be under <leader>w instead of <C-w>
--- Add keymaps for buffers management (or use plugin)
--- Add git plugin
+-- Change keymaps under Z (folding and moving text)
+-- Add keymap for opening all folds in the file
+-- Install and configure DAP
 -- Change notification history view
 -- Learn marks
