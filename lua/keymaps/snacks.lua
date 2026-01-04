@@ -18,9 +18,9 @@ function M.setup()
   end, { desc = 'Lazygit' })
 
   -- Zen & Zoom
-  vim.keymap.set('n', '<leader>zz', function()
-    require('snacks').zen()
-  end, { desc = 'Toggle zen mode' })
+  -- vim.keymap.set('n', '<leader>zz', function()
+  --   require('snacks').zen()
+  -- end, { desc = 'Toggle zen mode' })
 end
 
 return M
