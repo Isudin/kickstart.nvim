@@ -1,10 +1,12 @@
 local M = {}
 
 function M.setup()
-  vim.keymap.set('n', '<leader>n', function()
+  -- Notifications
+  vim.keymap.set('n', '<leader>dn', function()
     require('snacks').notifier.show_history()
-  end, { desc = 'Show notifications history' })
+  end, { desc = 'Show notification history' })
 
+  -- Lazygit
   vim.keymap.set('n', '<leader>g', '', { desc = '+[G]it' })
 
   vim.keymap.set('n', '<leader>gb', function()
@@ -14,6 +16,11 @@ function M.setup()
   vim.keymap.set('n', '<leader>gg', function()
     require('snacks').lazygit()
   end, { desc = 'Lazygit' })
+
+  -- Zen & Zoom
+  vim.keymap.set('n', '<leader>zz', function()
+    require('snacks').zen()
+  end, { desc = 'Toggle zen mode' })
 end
 
 return M

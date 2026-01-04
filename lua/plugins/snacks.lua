@@ -20,6 +20,15 @@ return {
       lazygit = {
         enabled = true,
       },
+      -- zen = {
+      --   enabled = true,
+      --   toggles = {
+      --     dim = false,
+      --   },
+      --   win = {
+      --     border = 'rounded',
+      --   },
+      -- },
     },
     require('keymaps/snacks').setup(),
   },
