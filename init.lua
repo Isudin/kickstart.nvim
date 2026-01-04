@@ -21,6 +21,12 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
+-- Fix bug with attempt and no-neck-hurt - when using zen mode,
+--      closing an attempt and getting back to zen mode (even if opened a new file)
+--      quits nvim
+-- Telescope - mark file name
+-- Add mini.surround keymaps
+-- Fix which-key long menu
 -- Change keymaps under Z (folding and moving text)
 -- Add keymap for opening all folds in the file
 -- Install and configure DAP

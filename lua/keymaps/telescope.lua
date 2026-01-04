@@ -15,6 +15,7 @@ function M.setup()
   vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
   vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Find existing buffers' })
   vim.keymap.set('n', '<leader>st', '<Cmd>TodoTelescope<CR>', { desc = 'Search TODOs' })
+  vim.keymap.set('n', '<leader>sa', '<Cmd>Telescope attempt<CR>', { desc = 'Search TODOs' })
 
   vim.keymap.set('n', '<leader>sG', function()
     builtin.live_grep { additional_args = { '--hidden' } }

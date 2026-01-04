@@ -1,5 +1,6 @@
 require('lazy').setup({
   spec = {
+    { import = 'plugins.attempt' },
     { import = 'plugins.blink' },
     { import = 'plugins.bufdelete' },
     { import = 'plugins.conform' },
