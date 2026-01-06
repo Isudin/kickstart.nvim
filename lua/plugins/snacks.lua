@@ -20,16 +20,23 @@ return {
       lazygit = {
         enabled = true,
       },
-      -- zen = {
-      --   enabled = true,
-      --   toggles = {
-      --     dim = false,
-      --   },
-      --   win = {
-      --     border = 'rounded',
-      --   },
-      -- },
+      zen = {
+        enabled = true,
+        toggles = {
+          dim = false,
+        },
+        show = {
+          statusline = true,
+        },
+        win = {
+          border = 'rounded',
+          backdrop = {
+            transparent = false,
+          },
+        },
+      },
     },
     require('keymaps/snacks').setup(),
+    -- require('autocmds/snacks').setup(),
   },
 }

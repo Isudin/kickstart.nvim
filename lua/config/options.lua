@@ -13,6 +13,8 @@ opt.expandtab = true -- Use spaces instead of tabs
 opt.fillchars = {
   foldopen = '',
   foldclose = '',
+  -- foldopen = 'v',
+  -- foldclose = '>',
   fold = ' ',
   foldsep = ' ',
   diff = '╱',
@@ -32,8 +34,8 @@ opt.incsearch = true
 opt.jumpoptions = 'view'
 opt.laststatus = 3 -- global statusline
 opt.linebreak = true -- Wrap lines at convenient points
-opt.list = true -- Show some whitespaces
-opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+-- opt.list = true -- Show some whitespaces
+-- opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 opt.mouse = 'a' -- Enable mouse mode
 opt.number = true -- Print line number
 opt.pumblend = 10 -- Popup blend
