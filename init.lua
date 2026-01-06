@@ -21,12 +21,9 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Change neovim-tips keybindings
--- Add mini.surround keymaps
--- Fix which-key long menu
--- Change keymaps under Z (folding and moving text)
 -- Add keymap for opening all folds in the file
 -- Install and configure DAP
--- Change notification history view
+-- Install DAP UI
+-- Change keymaps under Z (folding and moving text)
 -- Learn marks
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
