@@ -1,8 +1,6 @@
 local M = {}
 
 function M.setup()
-  vim.keymap.set('n', '<leader>n', '', { desc = '[N]o neck pain' })
-
   vim.keymap.set('n', '<leader>nh', function()
     vim.cmd 'NoNeckPainToggleLeftSide'
   end, { desc = 'Toggle left side' })

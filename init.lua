@@ -21,10 +21,7 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Fix bug with attempt and no-neck-hurt - when using zen mode,
---      closing an attempt and getting back to zen mode (even if opened a new file)
---      quits nvim
--- Telescope - mark file name
+-- Change neovim-tips keybindings
 -- Add mini.surround keymaps
 -- Fix which-key long menu
 -- Change keymaps under Z (folding and moving text)
@@ -32,3 +29,4 @@ require 'plugins'
 -- Install and configure DAP
 -- Change notification history view
 -- Learn marks
+-- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim

@@ -1,10 +1,5 @@
 return {
   {
-    '<leader>d',
-    '',
-    desc = '+[D]iagnostics',
-  },
-  {
     '<leader>dd',
     '<cmd>Trouble diagnostics toggle<cr>',
     desc = 'Diagnostics (Trouble)',

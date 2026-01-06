@@ -1,5 +1,4 @@
 return {
-  { '<leader>b', '', desc = '+[B]uffers management' },
   {
     '<leader>bd',
     function()

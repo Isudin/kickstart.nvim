@@ -42,7 +42,6 @@ vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window to the right' })
 vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
 vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
 
-vim.keymap.set('n', '<leader>w', '', { desc = '+[W]indows management' })
 vim.keymap.set('n', '<leader>w0', '', { desc = 'Use CTRL+<hjkl> to switch between windows' })
 vim.keymap.set('n', '<leader>w1', '', { desc = 'Use CTRL+SHIFT+<hjkl> to move windows' })
 vim.keymap.set('n', '<leader>wo', '<C-w>o', { desc = 'Close all other windows' })

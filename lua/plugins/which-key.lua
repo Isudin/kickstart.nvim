@@ -8,13 +8,13 @@ return {
       delay = 250,
       preset = 'helix',
       -- Set window position
-      win = {
-        col = 0.5,
-        row = 0.03,
-      },
+      -- win = {
+      --   col = 0.5,
+      --   row = 0.03,
+      -- },
       keys = {
-        scroll_down = '<c-j>',
-        scroll_up = '<c-k>',
+        scroll_down = '<a-j>',
+        scroll_up = '<a-k>',
       },
       icons = {
         -- set icon mappings to true if you have a Nerd Font
@@ -55,9 +55,17 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>t', group = '[T]oggle' },
-        -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>a', group = 'Attempt' },
+        { '<leader>b', group = 'Buffers management' },
+        { '<leader>d', group = 'Diagnostics' },
+        { '<leader>g', group = 'Git' },
+        { '<leader>h', group = 'Harpoon' },
+        { '<leader>n', group = 'Neovim' },
+        { '<leader>nt', group = 'Tips' },
+        { '<leader>s', group = 'Search' },
+        { '<leader>t', group = 'Toggle' },
+        { '<leader>u', group = 'UI' },
+        { '<leader>w', group = 'Windows management' },
       },
     },
   },

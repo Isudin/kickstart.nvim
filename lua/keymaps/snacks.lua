@@ -7,8 +7,6 @@ function M.setup()
   end, { desc = 'Show notification history' })
 
   -- Lazygit
-  vim.keymap.set('n', '<leader>g', '', { desc = '+[G]it' })
-
   vim.keymap.set('n', '<leader>gb', function()
     require('snacks').gitbrowse()
   end, { desc = 'Browse' })
@@ -17,10 +15,20 @@ function M.setup()
     require('snacks').lazygit()
   end, { desc = 'Lazygit' })
 
-  -- Zen & Zoom
-  -- vim.keymap.set('n', '<leader>zz', function()
-  --   require('snacks').zen()
-  -- end, { desc = 'Toggle zen mode' })
+  -- Zen
+  vim.keymap.set('n', '<leader>uz', function()
+    require('snacks').zen()
+  end, { desc = 'Toggle zen mode' })
+
+  -- Dim
+  vim.keymap.set('n', '<leader>ud', function()
+    local snacks = require 'snacks'
+    if snacks.dim.enabled then
+      snacks.dim.disable()
+    else
+      snacks.dim()
+    end
+  end, { desc = 'Toggle dim' })
 end
 
 return M

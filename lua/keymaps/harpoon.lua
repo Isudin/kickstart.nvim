@@ -4,8 +4,6 @@ return function()
   harpoon:setup()
   local list = harpoon:list()
   return {
-    vim.keymap.set('n', '<leader>h', '', { desc = '+[H]arpoon' }),
-
     vim.keymap.set('n', '<leader><leader>', function()
       harpoon.ui:toggle_quick_menu(list)
     end, { desc = 'Harpoon menu' }),
