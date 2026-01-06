@@ -15,6 +15,7 @@ require('lazy').setup({
     { import = 'plugins.noice' },
     -- { import = 'plugins.no-neck-pain' },
     { import = 'plugins.nvim-autopairs' },
+    { import = 'plugins.nvim-dap' },
     { import = 'plugins.nvim-lspconfig' },
     { import = 'plugins.nvim-treesitter' },
     { import = 'plugins.nvim-ufo' },

@@ -21,9 +21,8 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Add keymap for opening all folds in the file
--- Install and configure DAP
--- Install DAP UI
+-- Modify DAP UI
+-- Add <C-Backspace> to Telescope
 -- Change keymaps under Z (folding and moving text)
 -- Learn marks
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
