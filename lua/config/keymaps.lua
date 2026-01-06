@@ -62,3 +62,5 @@ vim.keymap.set('n', '<leader>w|', '<C-w>|', { desc = 'Max out width' })
 -- hence separate binding for terminal mode
 vim.keymap.set('t', '<C-BS>', '<A-BS>', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-BS>', '<C-W>', { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>tw', '<cmd>set wrap!<CR>', { desc = 'Wrap line' })
