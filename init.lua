@@ -21,8 +21,11 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Modify DAP UI
--- Add <C-Backspace> to Telescope
--- Change keymaps under Z (folding and moving text)
+-- Kill/move back to floating windows (like Noice's Notifications)
+-- Modify DAP UI and keymaps
+-- Fix mini.surround keymaps
+-- Change telescopes view to vertical only (prompt>list>preview)
+-- Install docker tools (lazydocker.nvim?)
+-- Install sql tools
 -- Learn marks
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim

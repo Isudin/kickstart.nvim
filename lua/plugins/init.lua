@@ -1,10 +1,11 @@
-require('lazy').setup({
+require('lazy').setup {
   spec = {
     { import = 'plugins.attempt' },
     { import = 'plugins.blink' },
     { import = 'plugins.bufdelete' },
     { import = 'plugins.conform' },
     { import = 'plugins.floaterm' },
+    { import = 'plugins.floating-help' },
     { import = 'plugins.gitsigns' },
     { import = 'plugins.harpoon' },
     { import = 'plugins.inc-rename' },
@@ -28,10 +29,8 @@ require('lazy').setup({
     { import = 'plugins.trouble' },
     { import = 'plugins.which-key' },
   },
-
-  -- require 'kickstart.plugins.debug',
-}, {
   ui = {
+    border = 'rounded',
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
@@ -50,4 +49,4 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-})
+}
