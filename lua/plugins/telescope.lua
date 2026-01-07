@@ -39,6 +39,9 @@ return {
         --   },
         -- },
         -- pickers = {}
+        defaults = {
+          path_display = { 'filename_first' },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -50,6 +53,7 @@ return {
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       pcall(require('telescope').load_extension, 'attempt')
+      pcall(require('telescope').load_extension, 'todo-comments')
 
       require('keymaps.telescope').setup()
     end,

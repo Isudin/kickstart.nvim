@@ -1,48 +1,45 @@
 local M = {}
 
 function M.setup()
+  local telescope = require 'telescope'
   local builtin = require 'telescope.builtin'
+  local horizontal_opts = { prompt_position = 'top' }
+  local vertical_opts = { width = 0.9, height = 0.9, prompt_position = 'top', mirror = true }
+  local ntrFlex = {
+    sorting_strategy = 'ascending',
+    layout_strategy = 'flex',
+    layout_config = { flip_columns = 150, horizontal = horizontal_opts, vertical = vertical_opts },
+  }
 
-  vim.keymap.set('n', '<leader>', '', { desc = '+Search' })
-  vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search help' })
-  vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Search keymaps' })
-  vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Search files' })
-  vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = 'Search select Telescope' })
-  vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = 'Search current word' })
-  vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Search by grep' })
-  vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Search diagnostics' })
-  vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Search resume' })
-  vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = 'Search Recent Files ("." for repeat)' })
-  vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Find existing buffers' })
-  vim.keymap.set('n', '<leader>st', '<Cmd>TodoTelescope<CR>', { desc = 'Search TODOs' })
-  vim.keymap.set('n', '<leader>sa', '<Cmd>Telescope attempt<CR>', { desc = 'Search TODOs' })
+  local ntrOpts = function(f, extra)
+    return function()
+      local opts = vim.tbl_deep_extend('force', {}, ntrFlex, extra or {})
+      f(opts)
+    end
+  end
 
-  vim.keymap.set('n', '<leader>sG', function()
-    builtin.live_grep { additional_args = { '--hidden' } }
-  end, { desc = 'Search by grep (hidden)' })
+  vim.keymap.set('n', '<leader>sh', ntrOpts(builtin.help_tags), { desc = 'Search help' })
+  vim.keymap.set('n', '<leader>sk', ntrOpts(builtin.keymaps), { desc = 'Search keymaps' })
+  vim.keymap.set('n', '<leader>sf', ntrOpts(builtin.find_files), { desc = 'Search files' })
+  vim.keymap.set('n', '<leader>sn', ntrOpts(builtin.find_files, { cwd = vim.fn.stdpath 'config' }), { desc = 'Search files' })
+  vim.keymap.set('n', '<leader>ss', ntrOpts(builtin.builtin), { desc = 'Search select Telescope' })
+  vim.keymap.set('n', '<leader>sw', ntrOpts(builtin.grep_string), { desc = 'Search current word' })
+  vim.keymap.set('n', '<leader>sg', ntrOpts(builtin.live_grep), { desc = 'Search by grep' })
+  vim.keymap.set('n', '<leader>sG', ntrOpts(builtin.live_grep, { additional_args = { '--hidden' } }), { desc = 'Search by grep (hidden)' })
+  vim.keymap.set('n', '<leader>s/', ntrOpts(builtin.live_grep, { grep_open_files = true, prompt_title = 'Live Grep in Open Files' }))
+  vim.keymap.set('n', '<leader>sd', ntrOpts(builtin.diagnostics), { desc = 'Search diagnostics' })
+  vim.keymap.set('n', '<leader>sr', ntrOpts(builtin.resume), { desc = 'Search resume' })
+  vim.keymap.set('n', '<leader>s.', ntrOpts(builtin.oldfiles), { desc = 'Search Recent Files ("." for repeat)' })
+  vim.keymap.set('n', '<leader>sb', ntrOpts(builtin.buffers), { desc = 'Find existing buffers' })
+  vim.keymap.set('n', '<leader>st', ntrOpts(telescope.extensions['todo-comments'].todo), { desc = 'Search TODOs' })
+  vim.keymap.set('n', '<leader>sa', ntrOpts(telescope.extensions.attempt.attempt), { desc = 'Search attepmt' })
 
-  -- Slightly advanced example of overriding default behavior and theme
   vim.keymap.set('n', '<leader>/', function()
-    -- You can pass additional configuration to Telescope to change the theme, layout, etc.
     builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
       winblend = 10,
       previewer = false,
     })
   end, { desc = 'Fuzzily search in current buffer' })
-
-  -- It's also possible to pass additional configuration options.
-  --  See `:help telescope.builtin.live_grep()` for information about particular keys
-  vim.keymap.set('n', '<leader>s/', function()
-    builtin.live_grep {
-      grep_open_files = true,
-      prompt_title = 'Live Grep in Open Files',
-    }
-  end, { desc = 'Search in Open Files' })
-
-  -- Shortcut for searching your Neovim configuration files
-  vim.keymap.set('n', '<leader>sn', function()
-    builtin.find_files { cwd = vim.fn.stdpath 'config' }
-  end, { desc = 'Search Neovim files' })
 end
 
 return M
