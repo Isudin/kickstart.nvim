@@ -66,6 +66,8 @@ return {
         { '<leader>t', group = 'Toggle' },
         { '<leader>u', group = 'UI' },
         { '<leader>w', group = 'Windows management' },
+        { '<leader>x', group = 'Debugging' },
+        { '<leader>xw', group = 'Windows' },
       },
     },
   },
