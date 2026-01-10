@@ -58,8 +58,6 @@ return {
       },
     }
 
-    require('keymaps.dap-ui').setup()
-
     -- Change breakpoint icons
     -- vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
     -- vim.api.nvim_set_hl(0, 'DapStop', { fg = '#ffcc00' })
@@ -84,5 +82,7 @@ return {
         detached = vim.fn.has 'win32' == 0,
       },
     }
+
+    require('keymaps.dap-ui').setup()
   end,
 }

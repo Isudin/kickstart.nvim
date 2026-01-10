@@ -22,6 +22,8 @@ require 'plugins'
 
 -- TODO:
 -- Modify DAP UI and keymaps (hide sidebar, leave only bottom bar)
+-- Change DAP icons
+-- Fix DAP log message
 -- Add harpoon extension to telescope and change <leader><space> shortcut to use this telescope
 -- Add macro registering info in the statusline
 -- Install docker tools (lazydocker.nvim?)
