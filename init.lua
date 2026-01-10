@@ -21,10 +21,6 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Change DAP icons
--- Fix DAP log message
--- Add harpoon extension to telescope and change <leader><space> shortcut to use this telescope
--- Add macro registering info in the statusline
 -- Install docker tools (lazydocker.nvim?)
 -- Install sql tools
 -- Install rest.nvim
