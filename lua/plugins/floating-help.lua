@@ -4,7 +4,7 @@ return {
     border = 'rounded',
     height = 0.8,
     width = 80,
-    position = 'NE',
+    position = 'C',
   },
   require('keymaps.floating-help').setup(),
 }
