@@ -1,7 +1,10 @@
 return {
-  'nil70n/floating-help',
+  'Tyler-Barham/floating-help.nvim',
   opts = {
     border = 'rounded',
-    ratio = 0.8,
+    height = 0.8,
+    width = 80,
+    position = 'NE',
   },
+  require('keymaps.floating-help').setup(),
 }
