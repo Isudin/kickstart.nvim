@@ -11,6 +11,7 @@ require('lazy').setup {
     { import = 'plugins.inc-rename' },
     { import = 'plugins.indent-blankline' },
     { import = 'plugins.lazydev' },
+    { import = 'plugins.lazydocker' },
     { import = 'plugins.mini' },
     { import = 'plugins.neovim-tips' },
     { import = 'plugins.noice' },
