@@ -21,7 +21,6 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Modify DAP UI and keymaps (hide sidebar, leave only bottom bar)
 -- Change DAP icons
 -- Fix DAP log message
 -- Add harpoon extension to telescope and change <leader><space> shortcut to use this telescope
@@ -30,6 +29,7 @@ require 'plugins'
 -- Install sql tools
 -- Install rest.nvim
 -- Install obsidian.nvim
+-- Add startpage
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
 -- Fix mini.surround keymaps
 -- Learn marks
