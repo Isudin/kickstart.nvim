@@ -2,8 +2,13 @@ local M = {}
 
 function M.setup()
   -- Notifications
+  -- vim.keymap.set('n', '<leader>dn', function()
+  --   require('snacks').notifier.show_history()
+  -- end, { desc = 'Show notification history' })
+
   vim.keymap.set('n', '<leader>dn', function()
-    require('snacks').notifier.show_history()
+    -- TODO: Use layout from plugins/snacks.lua when correctly modified
+    require('snacks').picker.notifications { layout = 'vertical' }
   end, { desc = 'Show notification history' })
 
   -- Lazygit
