@@ -21,11 +21,13 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Install docker tools (lazydocker.nvim?)
--- Install sql tools
 -- Install rest.nvim
--- Install obsidian.nvim
--- Add startpage
+-- Install sql tools
+-- Install testing plugin (neotest?)
+-- Configure snacks.dashboard
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
+-- Change obsidian telescope pickers UI
+-- Add obsidian keybindings
 -- Fix mini.surround keymaps
 -- Learn marks
+-- Migrate from Telescope to Snacks.picker (maybe)

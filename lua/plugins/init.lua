@@ -21,6 +21,7 @@ require('lazy').setup {
     { import = 'plugins.nvim-lspconfig' },
     { import = 'plugins.nvim-treesitter' },
     { import = 'plugins.nvim-ufo' },
+    { import = 'plugins.obsidian' },
     { import = 'plugins.persistent-breakpoints' },
     { import = 'plugins.smart-backspace' },
     { import = 'plugins.snacks' },
