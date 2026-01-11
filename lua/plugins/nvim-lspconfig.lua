@@ -26,11 +26,6 @@ return {
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
-          -- NOTE: Remember that Lua is a real programming language, and as such it is possible
-          -- to define small helper and utility functions so you don't have to repeat yourself.
-          --
-          -- In this case, we create a function that lets us more easily define mappings specific
-          -- for LSP related items. It sets the mode, buffer and description for us each time.
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
@@ -182,6 +177,13 @@ return {
             },
           },
         },
+        gopls = {},
+        -- TODO: Uncomment when it becomes available via Mason
+        -- kulala_ls = {
+        --   cmd = { 'kulala-ls' },
+        --   filetypes = { 'http', 'rest' },
+        --   single_file_support = true,
+        -- },
       }
 
       -- Ensure the servers and tools above are installed
@@ -202,6 +204,14 @@ return {
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+      -- Added after mason-tool-installer setup to skip it
+      -- TODO: Remove when it becomes available via Mason
+      table.insert(servers, {
+        cmd = { 'kulala-ls' },
+        filetypes = { 'http', 'rest' },
+        single_file_support = true,
+      })
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)

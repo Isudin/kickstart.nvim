@@ -10,6 +10,7 @@ require('lazy').setup {
     { import = 'plugins.harpoon' },
     { import = 'plugins.inc-rename' },
     { import = 'plugins.indent-blankline' },
+    { import = 'plugins.kulala' },
     { import = 'plugins.lazydev' },
     { import = 'plugins.lazydocker' },
     { import = 'plugins.mini' },

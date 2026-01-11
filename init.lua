@@ -21,7 +21,10 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Install rest.nvim
+-- Modify Kulala keymaps
+-- Change telescope menu UI for lsp references
+-- Move telescope keymaps from lsp config to telescope keymaps file
+-- Move autocmds from lsp config to new autocmds file
 -- Install sql tools
 -- Install testing plugin (neotest?)
 -- Configure snacks.dashboard
