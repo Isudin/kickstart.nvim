@@ -22,11 +22,10 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Make notifications/snacks help window float
--- Change telescope menu UI for lsp references
 -- Install sql tools
 -- Install testing plugin (neotest?)
 -- Configure snacks.dashboard
+-- Fix lag after pressing space in terminal and lazygit commit msg
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
 -- Change obsidian telescope pickers UI
 -- Add obsidian keybindings

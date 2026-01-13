@@ -20,6 +20,9 @@ return {
           notifications = 'vertical',
         },
       },
+      scroll = {
+        enabled = true,
+      },
       terminal = {
         enabled = false,
         win = {
