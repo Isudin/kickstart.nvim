@@ -7,6 +7,14 @@ return {
       -- type = 'float',
       new = false,
     },
+    preview = {
+      border = 'rounded',
+      type = 'float',
+    },
+    keys = {
+      ['<cr>'] = 'jump_close',
+      ['<esc>'] = 'close',
+    },
   },
   cmd = 'Trouble',
   keys = require 'keymaps.trouble',
