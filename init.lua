@@ -2,6 +2,7 @@ require 'config.globals'
 require 'config.options'
 require 'config.keymaps'
 require 'config.autocmds'
+require 'config.cmdwin-hack'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
@@ -21,6 +22,7 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
+-- Make notifications/snacks help window float
 -- Change telescope menu UI for lsp references
 -- Install sql tools
 -- Install testing plugin (neotest?)
