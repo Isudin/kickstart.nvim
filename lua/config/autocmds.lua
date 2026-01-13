@@ -18,3 +18,10 @@ vim.api.nvim_create_autocmd('RecordingEnter', {
     print 'Started recording macro'
   end,
 })
+
+vim.api.nvim_create_autocmd('ColorScheme', {
+  group = vim.api.nvim_create_augroup('WinSeparatorHL', { clear = true }),
+  callback = function()
+    vim.api.nvim_set_hl(0, 'WinSeparator', { link = 'FloatBorder' })
+  end,
+})
