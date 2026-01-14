@@ -32,6 +32,7 @@ require('lazy').setup {
     { import = 'plugins.tokyonight' },
     { import = 'plugins.trouble' },
     { import = 'plugins.which-key' },
+    { import = 'plugins.vim-dadbod-ui' },
   },
   ui = {
     border = 'rounded',

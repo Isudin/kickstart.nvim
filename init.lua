@@ -22,9 +22,8 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Install sql tools
+-- Change vim-dadbod-ui mappings - don't run query on :w
 -- Install testing plugin (neotest?)
--- Configure snacks.dashboard
 -- Fix lag after pressing space in terminal and lazygit commit msg
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
 -- Change obsidian telescope pickers UI

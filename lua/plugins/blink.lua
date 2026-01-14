@@ -84,7 +84,11 @@ return {
 
       sources = {
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
+        per_filetype = {
+          sql = { 'snippets', 'dadbod', 'buffer' },
+        },
         providers = {
+          dadbod = { name = 'Dadbod', module = 'vim_dadbod_completion.blink' },
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
           cmdline = {
             min_keyword_length = function(ctx)
@@ -100,6 +104,9 @@ return {
 
       snippets = { preset = 'luasnip' },
 
+      term = {
+        enabled = false,
+      },
       -- Blink.cmp includes an optional, recommended rust fuzzy matcher,
       -- which automatically downloads a prebuilt binary when enabled.
       --
