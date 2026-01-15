@@ -12,13 +12,13 @@ function M.setup()
   end, { desc = 'Show notification history' })
 
   -- Lazygit
-  vim.keymap.set('n', '<leader>gb', function()
-    require('snacks').gitbrowse()
-  end, { desc = 'Browse' })
+  -- vim.keymap.set('n', '<leader>gb', function()
+  --   require('snacks').gitbrowse()
+  -- end, { desc = 'Browse' })
 
-  vim.keymap.set('n', '<leader>gg', function()
+  vim.keymap.set('n', '<leader>tg', function()
     require('snacks').lazygit()
-  end, { desc = 'Lazygit' })
+  end, { desc = 'Toggle lazygit' })
 
   -- Zen
   vim.keymap.set('n', '<leader>uz', function()
