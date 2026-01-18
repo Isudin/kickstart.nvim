@@ -22,7 +22,11 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
--- Install testing plugin (neotest?)
+-- Disable one of two windows that show function arguments while inserting
+-- Add keyboard shortcut to scroll through terminal
+-- Make terminal wider
+-- Make Notifications maximized by default
+-- Make Notifications preview start with wordwrap enabled by default
 -- Add plugins for csv, json and xml files. Treesitter and such
 -- Fix lag after pressing space in terminal and lazygit commit msg
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim
@@ -31,3 +35,4 @@ require 'plugins'
 -- Fix mini.surround keymaps
 -- Learn marks
 -- Migrate from Telescope to Snacks.picker (maybe)
+-- Add tmux
