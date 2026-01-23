@@ -25,3 +25,17 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     vim.api.nvim_set_hl(0, 'WinSeparator', { link = 'FloatBorder' })
   end,
 })
+
+local timeout
+vim.api.nvim_create_autocmd('TermEnter', {
+  callback = function()
+    timeout = vim.o.timeoutlen
+    vim.o.timeoutlen = 10
+  end,
+})
+
+vim.api.nvim_create_autocmd('TermLeave', {
+  callback = function()
+    vim.o.timeoutlen = timeout
+  end,
+})
