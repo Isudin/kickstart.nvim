@@ -11,7 +11,7 @@ function M.setup()
     vim.fn.feedkeys(':' .. cmd)
   end, { desc = 'Move current file' })
 
-  vim.keymap.set('n', '<leader>fR', '<cmd>Delete<CR>', { desc = 'Delete current file and buffer' })
+  vim.keymap.set('n', '<leader>fR', '<cmd>Remove<CR>', { desc = 'Delete current file and buffer' })
 end
 
 return M
