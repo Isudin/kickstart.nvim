@@ -49,6 +49,7 @@ return {
         win = {
           border = 'rounded',
           position = 'float',
+          title_pos = 'center',
         },
       },
       zen = {
