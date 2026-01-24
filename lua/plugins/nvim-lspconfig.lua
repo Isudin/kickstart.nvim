@@ -115,6 +115,7 @@ return {
           },
         },
         gopls = {},
+        kotlin_lsp = {},
         -- TODO: Uncomment when it becomes available via Mason
         -- kulala_ls = {
         --   cmd = { 'kulala-ls' },
