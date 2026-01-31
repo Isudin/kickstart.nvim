@@ -1,7 +1,5 @@
 return {
-  -- TODO: load from upstream if PR is merged. Clean in Lazy after doing so
-  --   'imranzero/multiterm.nvim',
-  'isudin/multiterm.nvim',
+  'imranzero/multiterm.nvim',
   event = 'VeryLazy',
   opts = {
     show_backdrop = false,
