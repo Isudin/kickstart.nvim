@@ -22,6 +22,7 @@ rtp:prepend(lazypath)
 require 'plugins'
 
 -- TODO:
+-- Add <C-left/right> keymap in terminal
 -- Make Notifications preview start with wordwrap enabled by default
 -- Add plugins for csv, json and xml files. Treesitter and such
 -- Add plugin for remote edits - rsync.nvim and/or remote-ssh.nvim

@@ -63,6 +63,7 @@ return {
         { '<leader>h', group = 'Harpoon' },
         { '<leader>n', group = 'Neovim' },
         { '<leader>l', group = 'LSP' },
+        { '<leader>L', group = 'Language-specific' },
         { '<leader>nt', group = 'Tips' },
         { '<leader>o', group = 'Obsidian' },
         { '<leader>R', group = 'Rest' },

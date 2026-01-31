@@ -29,6 +29,13 @@ function M.setup()
       previewer = false,
     })
   end, { desc = 'Fuzzily search in current buffer' })
+
+  vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'dart',
+    callback = function()
+      vim.keymap.set('n', '<leader>Ls', windows.set_opts(telescope.extensions.flutter.commands), { desc = 'Search commands' })
+    end,
+  })
 end
 
 return M
