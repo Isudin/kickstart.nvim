@@ -35,5 +35,6 @@ return {
         return newVirtText
       end,
     },
+    require('keymaps.nvim-ufo').setup(),
   },
 }
