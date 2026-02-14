@@ -35,9 +35,15 @@ function M.setup()
     end
   end, { desc = 'Toggle dim' })
 
+  -- Explorer
   vim.keymap.set('n', '<leader>se', function()
     require('snacks').explorer()
   end, { desc = 'Explorer' })
+
+  -- Picker
+  vim.keymap.set('n', '<leader>sl', function()
+    require('snacks').picker.lsp_symbols()
+  end, { desc = 'LSP Symbols' })
 end
 
 return M
