@@ -13,6 +13,10 @@ return {
         name = 'personal',
         path = '~/vaults/personal',
       },
+      {
+        name = 'chronomancer',
+        path = '~/vaults/chronomancer',
+      },
     },
     note_id_func = function(title) -- Disable note id autogeneration
       return title
