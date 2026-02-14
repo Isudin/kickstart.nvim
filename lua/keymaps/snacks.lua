@@ -34,6 +34,10 @@ function M.setup()
       snacks.dim()
     end
   end, { desc = 'Toggle dim' })
+
+  vim.keymap.set('n', '<leader>se', function()
+    require('snacks').explorer()
+  end, { desc = 'Explorer' })
 end
 
 return M
