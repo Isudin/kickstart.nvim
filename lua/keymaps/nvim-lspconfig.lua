@@ -10,7 +10,7 @@ end
 function M.setup(event)
   ev = event
   local windows = require 'utils.telescope-windows'
-  map('<leader>ln', vim.lsp.buf.rename, 'Rename', { 'n', 'x' })
+  map('<leader>lr', vim.lsp.buf.rename, 'Rename', { 'n', 'x' })
   -- Execute a code action, usually your cursor needs to be on top of an error
   -- or a suggestion from your LSP for this to activate.
   map('<leader>la', vim.lsp.buf.code_action, 'Goto Code Action', { 'n', 'x' })
